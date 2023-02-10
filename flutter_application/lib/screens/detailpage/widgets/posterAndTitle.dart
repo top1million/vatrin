@@ -23,7 +23,7 @@ class posterAndTitle extends StatelessWidget {
           child: (value.backdropPath == null)
               ? Image.network(
                   defaultMovieImage,
-                  height: 300,
+                  height: 200,
                 )
               : Image.network(
                   "$imageBaseUrl${value.backdropPath}",
@@ -33,7 +33,7 @@ class posterAndTitle extends StatelessWidget {
         Positioned(
           bottom: 2,
           child: Container(
-            color: Colors.black38,
+            color: Color.fromARGB(0, 0, 0, 0),
             constraints: BoxConstraints(maxWidth: sizeWidth),
             child: Text(
               value.title!,

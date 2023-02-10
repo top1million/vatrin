@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:movie_app/constants/colors.dart';
 
@@ -19,7 +21,7 @@ class yearAndRating extends StatelessWidget {
           padding: const EdgeInsets.only(top: 8.0, left: 8),
           child: Text(
             "${value.releaseDate!.year}",
-            style: const TextStyle(fontSize: 18),
+            style: const TextStyle(fontSize: 18,color: logoColor),
           ),
         ),
         const SizedBox(
@@ -28,12 +30,12 @@ class yearAndRating extends StatelessWidget {
         (value.voteAverage) == null
             ? const SizedBox()
             : Padding(
-                padding: const EdgeInsets.only(top: 8.0, left: 8),
+                padding: const EdgeInsets.only(top: 8.0, left: 100),
                 child: Row(
                   children: [
                     const Text(
                       'IMDb rating: ',
-                      style: TextStyle(fontSize: 18),
+                      style: TextStyle(fontSize: 18 , color: logoColor),
                     ),
                     const Icon(
                       Icons.star,

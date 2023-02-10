@@ -42,27 +42,13 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
+        title: const Center(
+          child: Text(
           "Vatrin Film",
+          
           style: TextStyle(color: logoColor, fontSize: 25),
         ),
-        actions: [
-          TextButton(
-              onPressed: () {
-                randomPage();
-                Timer(const Duration(milliseconds: 100), () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) =>
-                              DetailPage(movieId: randomMovieId)));
-                });
-              },
-              child: const Text(
-                "Get a movie",
-                style: TextStyle(color: textbuttonColor, fontSize: textSize1),
-              ))
-        ],
+        )
       ),
       body: Column(
         children: [
